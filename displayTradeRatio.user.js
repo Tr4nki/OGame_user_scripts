@@ -13,6 +13,9 @@
 // @include https://*.ogame*gameforge.com/game/index.php?page=ingame&component=marketplace
 // @exclude https://*.ogame*gameforge.com/game/index.php?page=chat
 // @exclude https://*.ogame*gameforge.com/game/index.php?page=messages
+
+// @require https://openuserjs.org/src/scripts/Tr4nki/Marketplace_Ratio_Utils.user.js
+// @require https://openuserjs.org/src/scripts/Tr4nki/Constants_Utils.user.js
 // ==/UserScript==
 
 // ==OpenUserJS==
