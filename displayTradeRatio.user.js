@@ -10,7 +10,7 @@
 // @updateURL https://openuserjs.org/meta/Tr4nki/Display_Market_Ratio.meta.js
 // @downloadURL https://openuserjs.org/src/scripts/Tr4nki/Display_Market_Ratio.user.js
 //
-// @include https://*.ogame*gameforge.com/game/index.php?page=ingame&component=marketplace
+// @include https://*.ogame*gameforge.com/game/index.php?page=ingame&component=marketplace*
 // @exclude https://*.ogame*gameforge.com/game/index.php?page=chat
 // @exclude https://*.ogame*gameforge.com/game/index.php?page=messages
 
@@ -117,7 +117,6 @@ function calcRatios(){
 function openConstantsCollector(){
 	var constantsTab=this.open(location.origin+"/game/index.php?page=ingame&component=marketplace&tab=create_offer");
 	this.addEventListener("message",function(ev){
-		debugger;
 		var msg=ev.data;
 		if(msg=="done"){
 			constantsTab.close();
