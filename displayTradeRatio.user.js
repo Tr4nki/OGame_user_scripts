@@ -104,7 +104,7 @@ function calcRatios(){
 												
 												line.insertBefore(customRatioContainer,line.querySelector("div:nth-of-type(3)"));
 
-												console.log(`Se busca ${qttyToBuyInt} de ${itemToBuy} por ${qttyOfferInt} cantidad de ${currency} . Ratio -> ${ratio}`);
+												//console.log(`Se busca ${qttyToBuyInt} de ${itemToBuy} por ${qttyOfferInt} cantidad de ${currency} . Ratio -> ${ratio}`);
 	
 											});
 										}
