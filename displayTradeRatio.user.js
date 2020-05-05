@@ -6,7 +6,7 @@
 // @icon https://s168-es.ogame.gameforge.com/favicon.ico
 // @homepageURL https://openuserjs.org/scripts/Tr4nki/Display_Market_Ratio
 // @supportURL https://openuserjs.org/scripts/Tr4nki/Display_Market_Ratio/issues
-// @version 1.0.2
+// @version 1.0.3
 // @updateURL https://openuserjs.org/meta/Tr4nki/Display_Market_Ratio.meta.js
 // @downloadURL https://openuserjs.org/src/scripts/Tr4nki/Display_Market_Ratio.user.js
 //
@@ -70,7 +70,7 @@ function calcRatios(){
 												var currency=currencyClass[currencyClass.length-1];
 												//console.log("Recurso pedido -> %s",currency);
 	
-												var qttyToOffer=line.querySelector("div.info.price.center > div:nth-child(2)" + (tab=="selling"?" > span":"")).innerHTML;
+												var qttyToOffer=line.querySelector("div.info.price.center > .quantity" + (tab=="selling"?" > span":"")).innerHTML;
 												//console.log("Cantidad recurso pedido -> %s",qttyToOffer);
 	
 												var tradeObjectElement=line.querySelector("div.left *:nth-child(1)" + (tab=="selling"?"":" > div:nth-child(1)"));
