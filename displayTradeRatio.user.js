@@ -53,9 +53,8 @@ function calcRatios(){
 									mutationList.forEach((mutation) => {
 										if(mutation.type="childList" && mutation.addedNodes.length>0){
 											
-											console.log("Added Nodes -> %O",mutation.addedNodes);
 											var itemLines=mutation.target.querySelectorAll(".row");
-											console.log(itemLines);
+											
 											itemLines.forEach(function(line){
 												var itemOptions;
 												var ratio;
