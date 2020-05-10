@@ -6,7 +6,7 @@
 // @icon https://s168-es.ogame.gameforge.com/favicon.ico
 // @homepageURL https://openuserjs.org/scripts/Tr4nki/Display_Market_Ratio
 // @supportURL https://openuserjs.org/scripts/Tr4nki/Display_Market_Ratio/issues
-// @version 1.0.3
+// @version 1.0.4
 // @updateURL https://openuserjs.org/meta/Tr4nki/Display_Market_Ratio.meta.js
 // @downloadURL https://openuserjs.org/src/scripts/Tr4nki/Display_Market_Ratio.user.js
 //
@@ -18,7 +18,7 @@
 // @require https://openuserjs.org/src/scripts/Tr4nki/Constants_Utils.user.js
 
 // ==/UserScript==
-
+// Changes of this version: remove the logs.
 // ==OpenUserJS==
 // @author Tr4nki
 // ==/OpenUserJS==
