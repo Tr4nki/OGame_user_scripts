@@ -6,7 +6,7 @@
 // @icon https://s168-es.ogame.gameforge.com/favicon.ico
 // @homepageURL https://openuserjs.org/scripts/Tr4nki/Display_Market_Ratio
 // @supportURL https://openuserjs.org/scripts/Tr4nki/Display_Market_Ratio/issues
-// @version 1.0.4
+// @version 1.0.5
 // @updateURL https://openuserjs.org/meta/Tr4nki/Display_Market_Ratio.meta.js
 // @downloadURL https://openuserjs.org/src/scripts/Tr4nki/Display_Market_Ratio.user.js
 //
@@ -18,33 +18,40 @@
 // @require https://openuserjs.org/src/scripts/Tr4nki/Constants_Utils.user.js
 
 // ==/UserScript==
-// Changes of this version: remove the logs.
+// Changes of this version: determine context of execution. Renaming variables
 // ==OpenUserJS==
 // @author Tr4nki
 // ==/OpenUserJS==
 
-var unsafeWindow = window.wrappedJSObject;
+var unsafeWindow;
+if(navigator.userAgent.indexOf('Chrome')>-1){
+    unsafeWindow = window.unsafeWindow;
+}else if(navigator.userAgent.indexOf('Firefox')>-1){
+    unsafeWindow = window.wrappedJSObject;
+}
+
 const observed=document.querySelector(".items");
 const config={childList:true};
 var marketConstants=JSON.parse(localStorage.getItem("CLT_MPT_Marketplace_Constants"));
 
 var sp=new URLSearchParams(location.href);
-var component=sp.get("component");
+var component=sp.get("component");	
 var tab=sp.get("tab") || (unsafeWindow && unsafeWindow.marketplace && unsafeWindow.marketplace.tab);
 
 if(component && component=="marketplace" && tab=="create_offer"){
-	//debugger;
-	ConstUtils.injectConstantsCollector();
+	ConstUtils.injectConstantsColector();
 }
 
 
 if(observed && component=="marketplace" && (tab=="selling" || tab=="buying")){
 	if(!marketConstants){
-		openConstantsCollector();
+		openConstantsColector();
 	}else{
 		calcRatios();
 	}
 }
+
+var ratioCalculator=new MP_Ratio_Utils(marketConstants);
 
 function calcRatios(){
 	var regExpItems = RegExp('\/cdn.+');
@@ -88,7 +95,6 @@ function calcRatios(){
 												}else if(tradeObjectElement.tagName=="DIV"){
 													itemOptions=marketConstants.objectTradeOptions[marketConstants.htmlIDs_objectValues[tradeObjectElement.className]];
 												}
-												var ratioCalculator=new MP_Ratio_Utils(marketConstants);
 												ratio=ratioCalculator.calcRatio(itemOptions,qttyOfferInt,currency,qttyToBuyInt,null,null);
 												var customRatioContainer=document.createElement("div");
 												var contentRatioFlex=document.createElement("div");
@@ -113,7 +119,7 @@ function calcRatios(){
 	//observer.disconnect();
 }
 
-function openConstantsCollector(){
+function openConstantsColector(){
 	var constantsTab=this.open(location.origin+"/game/index.php?page=ingame&component=marketplace&tab=create_offer");
 	this.addEventListener("message",function(ev){
 		var msg=ev.data;
