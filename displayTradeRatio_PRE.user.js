@@ -1,14 +1,14 @@
 // ==UserScript==
-// @name Display_Market_Ratio
+// @name Display_Market_Ratio_PRE
 // @description Display the ratio between currencies
 // @copyright 2020, Tr4nki (https://openuserjs.org/users/Tr4nki)
 // @license MIT
 // @icon https://s168-es.ogame.gameforge.com/favicon.ico
-// @homepageURL https://openuserjs.org/scripts/Tr4nki/Display_Market_Ratio
-// @supportURL https://openuserjs.org/scripts/Tr4nki/Display_Market_Ratio/issues
+// @homepageURL https://openuserjs.org/scripts/Tr4nki/Display_Market_Ratio_PRE
+// @supportURL https://openuserjs.org/scripts/Tr4nki/Display_Market_Ratio_PRE/issues
 // @version 2.0.0
-// @updateURL https://openuserjs.org/meta/Tr4nki/Display_Market_Ratio.meta.js
-// @downloadURL https://openuserjs.org/src/scripts/Tr4nki/Display_Market_Ratio.user.js
+// @updateURL https://openuserjs.org/meta/Tr4nki/Display_Market_Ratio_PRE.meta.js
+// @downloadURL https://openuserjs.org/src/scripts/Tr4nki/Display_Market_Ratio_PRE.user.js
 //
 // @include https://*.ogame*gameforge.com/game/index.php?page=ingame&component=marketplace*
 // @exclude https://*.ogame*gameforge.com/game/index.php?page=chat
