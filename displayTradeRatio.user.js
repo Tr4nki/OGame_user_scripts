@@ -6,7 +6,7 @@
 // @icon https://s168-es.ogame.gameforge.com/favicon.ico
 // @homepageURL https://openuserjs.org/scripts/Tr4nki/Display_Market_Ratio
 // @supportURL https://openuserjs.org/scripts/Tr4nki/Display_Market_Ratio/issues
-// @version 2.0.0
+// @version 1.0.5
 // @updateURL https://openuserjs.org/meta/Tr4nki/Display_Market_Ratio.meta.js
 // @downloadURL https://openuserjs.org/src/scripts/Tr4nki/Display_Market_Ratio.user.js
 //
@@ -14,11 +14,11 @@
 // @exclude https://*.ogame*gameforge.com/game/index.php?page=chat
 // @exclude https://*.ogame*gameforge.com/game/index.php?page=messages
 
-// @require https://openuserjs.org/src/libs/Tr4nki/MarketRatioUtilsLib.js
-// @require https://openuserjs.org/src/libs/Tr4nki/MarketRatioUtilsLib.js
+// @require https://openuserjs.org/src/scripts/Tr4nki/Marketplace_Ratio_Utils.user.js
+// @require https://openuserjs.org/src/scripts/Tr4nki/Constants_Utils.user.js
 
 // ==/UserScript==
-// Changes of this version: change requires for using it as libraries instead of user scripts
+// Changes of this version: determine context of execution. Renaming variables
 // ==OpenUserJS==
 // @author Tr4nki
 // ==/OpenUserJS==
