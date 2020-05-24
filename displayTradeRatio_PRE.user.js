@@ -15,7 +15,7 @@
 // @exclude https://*.ogame*gameforge.com/game/index.php?page=messages
 
 // @require https://openuserjs.org/src/libs/Tr4nki/MarketRatioUtilsLib.js
-// @require https://openuserjs.org/src/libs/Tr4nki/MarketRatioUtilsLib.js
+// @require https://openuserjs.org/src/libs/Tr4nki/ConstantsUtilLib.js
 
 // ==/UserScript==
 // Changes of this version: change requires for using it as libraries instead of user scripts
